@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 6rem;
+  margin-bottom: 40px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.play-button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  font-size: xx-large;
+  border-radius: 6px;
+  padding: 1%;
+}
+
+.info-button {
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  border-radius: 6px;
+  padding: 0.5%;
+}
+
+#info {
+  height: 1cm;
+  width: 1cm;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.popup h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.popup p {
+  margin-bottom: 15px;
+}
+
+.close-button {
+  padding: 8px 16px;
+  font-size: 1rem;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}

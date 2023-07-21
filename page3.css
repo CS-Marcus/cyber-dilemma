@@ -1,0 +1,157 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 50%;
+      margin: 0 auto;
+      padding-top: 50px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"]{
+      pointer-events: none;
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    
+    input[type="password"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 8px 12px;
+      background-color: #70c9db;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    /*
+    #popup1,
+    #popup2,
+    #popup3 {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 20px;
+      background-color: #f1f1f1;
+      border: 1px solid #ccc;
+      z-index: 9999;
+      
+    }
+
+    #popup1 p,
+    #popup2 p,
+    #popup3 p {
+      margin-top: 0;
+    }
+
+    #nextButton {
+      display: inline-block;
+      padding: 8px 12px;
+      background-color: #060809;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      margin-right: 50px;
+      width: 65%;
+    } */
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+    
+    .popup-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .popup h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+    
+    .popup p {
+      margin-bottom: 15px;
+    }
+    
+    .close-button {
+      padding: 8px 16px;
+      font-size: 1rem;
+      background-color: #f44336;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+
+/*Instructions Code*/
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+h1 {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 2rem;
+  max-width: 100%;
+}
+
+.container h2 {
+  margin-top: 0;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="page5.css">
+  <title>Phishing Game</title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Instantgramms Group Chat</h1>
+    </div>
+    <div class="chat">
+      <div class="message">
+        <div class="sender">Friend A:</div>
+        <div class="content">Hey everyone! I just watched an incredible Marvel movie. It got me thinking, which Marvel movie is the best?</div>
+      </div>
+      <div class="message">
+        <div class="sender">You:</div>
+        <div class="content">That's a tough one! There are so many amazing choices.</div>
+      </div>
+      <div class="message">
+        <div class="sender">Friend B:</div>
+        <div class="content">I absolutely loved Avengers: Endgame. The action and emotions were on another level!</div>
+      </div>
+      <div class="message">
+        <div class="sender">Friend C:</div>
+        <div class="content">For me, Black Panther stands out. It had such a powerful story and incredible performances.</div>
+      </div>
+      <div class="message">
+        <div class="sender">Friend A:</div>
+        <div class="content">Spider-Man: Into the Spider-Verse blew my mind! The animation and storytelling were top-notch.</div>
+      </div>
+      <div class="message">
+        <div class="sender">You:</div>
+        <div class="content">All great choices! If you haven't seen Thor: Ragnarok, you're missing out on some hilarious moments.</div>
+      </div>
+      <div class="message">
+        <div class="sender">Friend B:</div>
+        <div class="content">Thanks for the recommendation! I'll watch it tonight.</div>
+      </div>
+      <div class="message">
+        <div class="sender">Friend C:</div>
+        <div class="content">By the way, I found a link to a Marvel movie trivia quiz. Give it a try!</div>
+      </div>
+      <div class="message">
+        <div class="sender">Friend A:</div>
+        <div class="content">Here are the options:<br>
+          1. <a href="#" onclick="checkAnswer(1)">http://activate.netflix.fblogins.net/88adbao798283o8298398?login.asp</a><br>
+          2. <a href="#" onclick="checkAnswer(2)">https://www.netflix.com/ca/Login/Profile4082864</a> <br>
+          3. <a href="#" onclick="checkAnswer(3)">www.netflix.corn/ca/login</a>
+        </div>
+      </div>
+      <div class="message">
+        <div class="sender">You:</div>
+        <div class="content">Hmm, let me choose the right link to the trivia quiz.</div>
+      </div>
+    </div>
+    <div class="quiz">
+      <h2>Which link should you click for the trivia quiz?</h2>
+      <div class="options">
+        <button onclick="checkAnswer(1)">Link 1</button>
+        <button onclick="checkAnswer(2)">Link 2</button>
+        <button onclick="checkAnswer(3)">Link 3</button>
+  </div>
+  <!-- <div class="fireworks">
+    <div class="pyro">
+      <div class="before"></div>
+      <div class="after"></div>
+    </div>
+  </div>
+  <div class="sad-face">
+    <div class="eyes"></div>
+    <div class="mouth"></div>
+  </div> -->
+  <div class="popup" id="popup1">
+    <div class="popup-content">
+      <h2>Oops! You clicked on a phishing link.</h2>
+      <p> Phishing is a cyber crime technique where a link is usually used to steal the victim's personal information or install malware on the mobile device. </p>
+      <p>The link "http://activate.netflix.fblogins.net/88adbao798283o8298398?login.asp" looks suspicious and has some red flags. 
+        The domain "fblogins.net" is not the official Netflix domain, which raises concerns.</p>
+      <p>Additionally, the link contains random character strings that don't make sense for a genuine URL (88adbao798283o8298398).</p>
+      <button class="close-button" onclick="closePopup()">Continue</button>
+    </div>
+  </div>
+  <div class="popup" id="popup2">
+    <div class="popup-content">
+      <h2>Well Done! You selected the legitimate link</h2>
+      <p> Phishing is a cyber crime technique where a link is usually used to steal the victim's personal information or install malware on the mobile device. </p>
+      <p>The link "https://www.netflix.com/ca/Login/Profile4082864" is safe and legitimate. It starts with "https://" and belongs to the official Netflix website,
+making it secure. </p>
+      <p>The path "/ca/Login/Profile4082864" suggests it leads to a specific user profile login on the Canadian version of Netflix. There are no suspicious characters, and the link appears well-structured.</p>
+      <button class="close-button" onclick="closePopup()">Continue</button>
+    </div>
+  </div>
+  <div class="popup" id="popup3">
+    <div class="popup-content">
+      <h2>Oops! You clicked on a phishing link.</h2>
+      <p> Phishing is a cyber crime technique where a link is usually used to steal the victim's personal information or install malware on the mobile device. </p>
+      <p>The link "www.netflix.corn/ca/login" is not working because it is misspelled with "corn" instead of "com,".  
+        The URL path "/ca/login" appears to be a login page for Netflix, but the misspelled domain is a common misleading technique. </p>
+      <p>Be on the lookout for cyber-tricks!</p>
+      <button class="close-button" onclick="closePopup()">Continue</button>
+    </div>
+  </div>
+  <script src="page5.js"></script>
+</body>
+</html>
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

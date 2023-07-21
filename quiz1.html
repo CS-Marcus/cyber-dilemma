@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz 1</title>
+  <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+  <h1>Pre-Game Quiz</h1>
+  <h4> This quiz is to collect data about your cyber security knowledge before playing the game </h4>
+  <form id="quizForm">
+    <p>Question 1: You get an email from your bank asking for your name, address, and credit card
+      information so they can deposit some money into your account. You should send your information to them.</p>
+    <label><input type="radio" name="q1" value="a">a) True</label>
+    <label><input type="radio" name="q1" value="b">b) False</label> <br>
+    <!-- <label><input type="radio" name="q1" value="c">c) 5</label>
+    <label><input type="radio" name="q1" value="d">d) 6</label> -->
+
+    <p>Question 2: What is steganography?</p>
+    <label><input type="radio" name="q2" value="a">a) A way of scrambling data with keys to conceal it </label>
+    <label><input type="radio" name="q2" value="b">b) A system that protects your data from cyber attacks </label>
+    <label><input type="radio" name="q2" value="c">c) A form of hiding sensitive information in plain sight</label> <br>
+    <!-- <label><input type="radio" name="q2" value="d">d) Berlin</label> -->
+
+    <p>Question 3: You go to the mall with a few of your friends and film a tiktok. What should you do with the video?</p>
+    <label><input type="radio" name="q3" value="a">a) Post the tiktok</label>
+    <label><input type="radio" name="q3" value="b">b) Wait a while and post it later</label>
+    <label><input type="radio" name="q3" value="c">c) Don't post the tiktok </label> <br>
+    <!-- <label><input type="radio" name="q3" value="d">d) Micheala</label> -->
+
+    <p>Question 4: Is 4yLP34FbMn a strong password?</p>
+    <label><input type="radio" name="q4" value="a">a) Yes</label>
+    <label><input type="radio" name="q4" value="b">b) No</label> <br>
+    <!-- <label><input type="radio" name="q3" value="c">c) Jane</label>
+    <label><input type="radio" name="q3" value="d">d) Micheala</label> -->
+
+    <p>Question 5: Which of the following is an example of a phishing attack?</p>
+    <label><input type="radio" name="q5" value="a">a) You click on a link that redirects you to a site you didn't want to visit</label>
+    <!-- <label><input type="radio" name="q3" value="b">b) Recieveing an email that you've won a new iPhone and only need to pay for shipping </label>
+    <label><input type="radio" name="q3" value="c">c) You get a call from the FBI saying your identity has been stolen</label> -->
+    <label><input type="radio" name="q5" value="d">b) Getting an email from your bank concerning a withdrawal</label>
+    <label><input type="radio" name="q5" value="d">c) You recieve a messge from an unknown number</label> <br>
+
+    <button type="button" onclick="calculateScore()">Finish Quiz</button>
+
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <h2> Thanks for submitting! </h2>
+        <p>Your score will be shown at the end of the game</p>
+        <p>But for now, move on to the Game</p>
+        <button class= "close-button"type="button" onclick="moveOn()"> PLAY THE GAME! </button>
+      </div>
+    </div>
+
+  </form>
+
+  <script>
+    function calculateScore() {
+      const form = document.getElementById("quizForm");
+      let score = 0;
+
+      // Get the user's answers and calculate the score
+      const q1Answer = form.elements["q1"].value;
+      if (q1Answer === "b") {
+        score++;
+      }
+
+      const q2Answer = form.elements["q2"].value;
+      if (q2Answer === "c") {
+        score++;
+      }
+
+      const q3Answer = form.elements["q3"].value;
+      if (q3Answer === "b") {
+        score++;
+      }
+
+      const q4Answer = form.elements["q4"].value;
+      if (q4Answer === "b") {
+        score++;
+      }
+
+      const q5Answer = form.elements["q5"].value;
+      if (q5Answer === "a") {
+        score++;
+      }
+
+      // Store the score in local storage
+      localStorage.setItem("quiz1Score", score);
+
+      // alert("Thanks for submitting! Continue on to the game now");
+      const popup = document.getElementById('popup');
+      popup.style.display = 'block';
+    }
+
+    function moveOn() {
+        // Redirect to the next page
+        window.location.href = "page2.html";
+    }
+  </script>
+
+</body>
+</html>

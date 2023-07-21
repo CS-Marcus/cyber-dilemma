@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Submission Box</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form with Image</title>
+  <link rel="stylesheet" href="page6.css">
+  <script src="page6.js"></script>
+  
+</head>
+<body>
+ 
+  <div class="popup" id="popup1">
+    <div class="popup-content">
+      <h2>Well Done!</h2>
+      <p id = "result">Great job you were able to look between the lines and figure out the hidden meaning of the image. This picture was an example of Steganography. Steganography is the Cyber Security practice of concealing information in plain sight. </p>
+      <!-- <p>Uses in CS + examples</p> -->
+      <button class="close-button" onclick="closePopup()"> Continue </button>
+    </div>
+  </div>
+
+  <div class="popup" id="popup2">
+    <div class="popup-content">
+      <h2>Not Quite!</h2>
+      <p>Unfortunately, you got the answer incorrect. You were supposed to look between the lines of the image, to find the correct message. This task was using steganography. Steganography is the Cyber Security practice of concealing information in plain sight.</p>
+      <button class="close-button" onclick="closePopup()"> Continue </button>
+    </div>
+  </div>
+  
+  <div class="container">
+    <img src="picture3.png" alt="Image" class="image">
+    <div class="form-container">
+      <div id = "caption">FIND THE SECRET MESSAGE. ONLY 1% OF PEOPLE ARE ABLE TO SOLVE THIS!</div>
+      <input type="text" id="answer" placeholder="Enter your input here..." class="input-box">
+      <button onclick="openPopup()" type="submit" class="submit-button">Submit</button>
+      <button onclick="showHint()"class="hint-button">Hint</button>
+    </div>
+  </div>
+
+  <!-- Hint box element -->
+  <div id="hintBox">
+    <p>Here's a helpful hint...</p>
+    <p>Zoom in on shrek</p>
+  </div>
+
+</body>
+</html>

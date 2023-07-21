@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Profile</title>
+  <link rel="stylesheet" href="page4.css">
+</head>
+<body>
+
+  <header>
+    <h1>Accept or Deny follow requests</h1>
+  </header>
+
+  <div class="profile">
+    <img class="profile-picture" src="final.png" alt="Profile Picture">
+    <h1 class="username">RfAqpDbDYTCM</h1>
+    <div class="profile-info">
+      <p class="followers">Followers: 3000</p>
+      <p class="following">Following: 1000</p>
+      <p class="posts">Posts: 0</p>
+    </div>
+    
+      <p>Bio: I'm not a hacker</p>
+      <p>Mutual Friends: 0</p>
+    
+  </div>
+  
+  <div class="gallery">
+    <img src="gamePic.png" alt="Post 1">
+    <img src="unnamed.jpg" alt="Post 2">
+        <img src="unnamed.jpg" alt="Post 3">
+            <img src="unnamed.jpg" alt="Post 4">
+                <img src="unnamed.jpg" alt="Post 5">
+                    <img src="unnamed.jpg" alt="Post 6">
+
+  </div>
+  <div class="button-container">
+    <!-- <button class="next-button" disabled onclick="navigateToNextProfile()">Next Profile</button> -->
+    <button class="accept-button" onclick="showAcceptPopup()">Accept</button>
+    <button class="deny-button" onclick="showDenyPopup()">Deny</button>
+  </div>
+
+  <div class="popup" id="popup1">
+    <div class="popup-content">
+      <h2>Not Quite!</h2>
+      <p>This profile has a nonsensical username, no profile picture, no bio, nonsensical pictures, or followers. 
+        You don't know if this is a stranger or a bot account.</p>
+      <p> Allowing bots to follow you is a security risk, as they can take over your account and carry out malicious activities, because of this its best not to allow these accounts to follow you!</p>
+      <button class="close-button" onclick="closePopup()">Next</button>
+    </div>
+  </div>
+
+  <div class="popup" id="popup2">
+    <div class="popup-content">
+      <h2>Good Choice!</h2>      
+      <p>This profile has a nonsensical username, no profile picture, no bio, nonsensical pictures, or followers. 
+        You don't know if this is a stranger or a bot account.</p>
+        <p> Allowing bots to follow you is a security risk, as they can take over your account and carry out malicious activities, because of this its best not to allow these accounts to follow you!</p>
+        <button class="close-button" onclick="closePopup()">Next</button>
+    </div>
+  </div>
+
+  <script>
+    function closePopup() {
+      // Replace the URL below with the appropriate URL of the next profile
+      window.location.href = "page4c.html";
+    }
+
+    function showAcceptPopup() {
+      var popup = document.getElementById('popup1');
+      popup.style.display = "block";
+      disableButtons();
+    }
+
+    function showDenyPopup() {
+      var popup = document.getElementById('popup2');
+      popup.style.display = "block";
+      disableButtons();
+    }
+
+    function enableNextButton() {
+      const nextButton = document.querySelector('.next-button');
+      nextButton.disabled = false;
+    }
+
+    function disableButtons() {
+      document.querySelectorAll('.accept-button, .deny-button').forEach(button => {
+        button.disabled = true;
+      });
+    }
+  </script>
+</body>
+</html>

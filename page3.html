@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="page3.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+  <!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+</head>
+<body>
+
+  <header>
+    <h1>Choose the Right Password</h1>
+  </header>
+  <main>
+     <div class="container">
+      <h2>Instructions</h2>
+       <p>When picking your password below keep these factors in mind.</p>
+      <ol>
+        <li><strong>Length</strong>: Make your password at least 6 characters long.</li>
+        <li><strong>Complexity</strong>: Use a mix of uppercase letters, lowercase letters, numbers, and special characters (e.g., !, @, #, $, %, etc.).</li>
+        <li><strong>Avoid common words</strong>: Stay away from easily guessable words or phrases like "password," "123456," "qwerty," etc.</li>
+        <li><strong>Avoid personal information</strong>: Refrain from using personal information such as your name or birthday as it is easily obtainable.</li>
+        <li><strong>Substitutions</strong>: Replace letters with numbers or special characters that look similar. For example, "E" can become "3," "A" can become "@," and "S" can become "$."</li>
+        
+      </ol>
+    </div>
+  </main>
+  
+  <div class="container">
+    <h1>Instantgramms</h1>
+    <label for="username">Username:</label>
+    <input type="text" id="username" placeholder="Its.Quinn">
+    <label for="password">Password:</label>
+    <input type="password" id="password" placeholder="Enter your password">
+    <br>
+    <button class="button" onclick="showPopup('popup1')">M@apleL3afs</button>
+    <button class="button" onclick="showPopup('popup2')">w^4Y&S836uVLL</button>
+    <button class="button" onclick="showPopup('popup3')">toronto12345</button>
+  </div>
+
+  <div class="popup" id="popup1">
+    <div class="popup-content">
+      <h2>Strong Password!</h2>
+      <p>Password: M@apleL3afs</p>
+      <p>Good choice! This password is both strong and easy to remember as it has multiple symbols, captial letters, lowercase letters.</p>
+      <button class="close-button" onclick="closePopup()">Next</button>
+    </div>
+  </div>
+
+  <div class="popup" id="popup2">
+    <div class="popup-content">
+      <h2>Not Bad!</h2>
+      <p>Password: w^4Y&S836uVLL</p>
+      <p>Close! This password does have symbols, upper and lowercase alphabets, however, the password is hard to remember unless you have it written down.</p>
+      <button class="close-button" onclick="closePopup()">Next</button>
+    </div>
+  </div>
+
+  <div class="popup" id="popup3">
+    <div class="popup-content">
+      <h2>Weak Password</h2>
+      <p>Password: toronto12345</p>
+      <p>This password is easy to recognize. It has a location. If someone knows where you live or that you like Toronto they may try to use this word when attempting to login to your account. Additionally, it has a number sequence the is commonly used. When creating your passwords try to use something others will not be able to guess and unique.</p>
+      <button class="close-button" onclick="closePopup()">Next</button>
+    </div>
+  </div>
+
+  <!--
+  <div id="popup1">
+    <p>Popup 1</p>
+    <h2>Popup Title</h2>
+    <p>Popup content goes here.</p>
+    <button onclick="closePopup()">Next</button>
+  </div>
+
+  <div id="popup2">
+    <p>Popup 2</p>
+    <h2>Popup Title</h2>
+    <p>Popup content goes here.</p>
+    <button onclick="closePopup()">Next</button>
+  </div>
+
+  <div id="popup3">
+    <p>Popup 3</p>
+    <h2>Popup Title</h2>
+    <p>Popup content goes here.</p>
+    <button onclick="closePopup()">Next</button>
+  </div>
+ -->
+
+  <script>
+    function showPopup(popupId) {
+      var popup = document.getElementById(popupId);
+      popup.style.display = "block";
+    }
+
+    function closePopup(popupId) {
+      window.location.href = 'page4.html';
+    }
+
+    /* Code to show password option in password box **Still working on this
+    const options = document.querySelectorAll("li");
+
+    options.forEach(option => {
+      option.addEventListener("click", () => {
+        const selectedOption = option.textContent;
+        document.getElementById("selected-option").textContent = selectedOption;
+      });
+    });*/
+  </script>
+</body>
+
+  
+
+
+</html>

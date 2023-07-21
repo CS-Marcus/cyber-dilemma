@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Profile</title>
+  <link rel="stylesheet" href="page4.css">
+</head>
+<body>
+
+  <header>
+    <h1>Accept or Deny follow requests</h1>
+  </header>
+
+  <div class="profile">
+    <img class="profile-picture" src="correctprofilepicture.png" alt="Profile Picture">
+    <h1 class="username">alexis_rodriguez</h1>
+    <div class="profile-info">
+      <p class="followers">Followers: 100</p>
+      <p class="following">Following: 523</p>
+      <p class="posts">Posts: 50</p>
+    </div>
+
+    <p>Bio: My name is Alexis!</p>
+    <p>Mutual Friends: 12</p>
+    
+  </div>
+  <div class="gallery">
+    <img src="boba.jpg" alt="Post 1">
+    <img src="buildings.jpg" alt="Post 2">
+    <img src="fireworks.jpg" alt="Post 3">
+    <img src="flowers.jpg" alt="Post 4">
+    <img src="green.jpg" alt="Post 5">
+    <img src="water.jpg" alt="Post 6">
+  </div>
+  <div class="button-container">
+    <!-- <button class="next-button" disabled onclick="navigateToNextProfile()">Next Profile</button> -->
+    <button class="accept-button" onclick="showAcceptPopup()">Accept</button>
+    <button class="deny-button" onclick="showDenyPopup()">Deny</button>
+  </div>
+
+  <div class="popup" id="popup1">
+    <div class="popup-content">
+      <h2>Good Choice!</h2>
+      <p>This account looks good! You have mutual friends, the account has followers and a username that makes sense, and a personal profile bio with a personalized bio.</p>
+      <p> Knowing how to differentiate actual accounts from bots (fake) accounts is an essential cyber literacy skill. Continue to the next profile</p>
+      <button class="close-button" onclick="closePopup()">Next</button>
+    </div>
+  </div>
+
+  <div class="popup" id="popup2">
+    <div class="popup-content">
+      <h2>Not Quite!</h2>
+      <p>You can accept this account, its safe! You have mutual friends, the account has followers and a username that makes sense, and a personal profile bio with a personalized bio.</p>
+      <p> Knowing how to differentiate actual accounts from bots (fake) accounts is an essential cyber literacy skill. Continue to the next profile</p>
+      <button class="close-button" onclick="closePopup()">Next</button>
+    </div>
+  </div>
+
+  <script>
+    function closePopup() {
+      // Replace the URL below with the appropriate URL of the next profile
+      window.location.href = "page4b.html";
+    }
+
+    function showAcceptPopup() {
+      var popup = document.getElementById('popup1');
+      popup.style.display = "block";
+      disableButtons();
+    }
+
+    function showDenyPopup() {
+      var popup = document.getElementById('popup2');
+      popup.style.display = "block";
+      disableButtons();
+    }
+
+    function enableNextButton() {
+      const nextButton = document.querySelector('.next-button');
+      nextButton.disabled = false;
+    }
+
+    function disableButtons() {
+      document.querySelectorAll('.accept-button, .deny-button').forEach(button => {
+        button.disabled = true;
+      });
+    }
+  </script>
+</body>
+</html>

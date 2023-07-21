@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram Profile</title>
+  <link rel="stylesheet" href="page4.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>Accept or Deny follow requests</h1>
+  </header>
+
+  <div class="profile">
+    <img class="profile-picture" src="Guy_Pic.jpg" alt="Profile Picture">
+    <h1 class="username">Peace_Guy</h1>
+    <div class="profile-info">
+      <p class="followers">Followers: 628</p>
+      <p class="following">Following: 300</p>
+      <p class="posts">Posts: 50</p>
+    </div>
+
+    <p>Bio: A 30 year guy living laughing and loving his life!</p>
+    <p>Mutual Friends: 3</p>
+    
+  </div>
+  <div class="gallery">
+    <img src= Post_1.jpg alt="Post 1">
+    <img src="Post_2.jpg" alt="Post 2">
+    <img src="Post_3.jpg" alt="Post 3">
+    <img src="Post_4.jpg" alt="Post 4">
+  </div>
+  <div class="button-container">
+    <!-- <button class="next-button" onclick="navigateToNextProfile()">Next Challenge</button> -->
+    <button class="accept-button" onclick="showAcceptPopup()">Accept</button>
+    <button class="deny-button" onclick="showDenyPopup()">Deny</button>
+  </div>
+
+  <div class="popup" id="popup1">
+    <div class="popup-content">
+      <h2>Not Quite!</h2>
+      <p> Although this account seems to be owned by a real person as it has a proper username, a bio, pictures, and followers, but you have no mutuals and this person looks older!</p>
+      <p>It's best to not allow unfamiliar people to follow you on your private accounts because a lot of sensitive information might is shared online.For example, your home address and identification cards.</p>
+      <button class="close-button" onclick="closePopup()">Continue</button>
+    </div>
+  </div>
+
+  <div class="popup" id="popup2">
+    <div class="popup-content">
+      <h2>Good Choice!</h2>      
+      <p> Although this account seems to be owned by a real person as it has a proper username, a bio, pictures, and followers, but you have no mutuals and this person looks older!</p>
+      <p>It's best to not allow unfamiliar people to follow you on your private accounts because a lot of sensitive information might is shared online.For example, your home address and identification cards.</p>
+      <button class="close-button" onclick="closePopup()">Continue</button>
+    </div>
+  </div>
+
+  <script>
+    function closePopup() {
+      // Replace the URL below with the appropriate URL of the next profile
+      window.location.href = "page5.html";
+    }
+
+    function showAcceptPopup() {
+      var popup = document.getElementById('popup1');
+      popup.style.display = "block";
+      disableButtons();
+    }
+
+    function showDenyPopup() {
+      var popup = document.getElementById('popup2');
+      popup.style.display = "block";
+      disableButtons();
+    }
+
+    function disableButtons() {
+      document.querySelectorAll('.accept-button, .deny-button').forEach(button => {
+        button.disabled = true;
+      });
+    }
+  </script>
+</body>
+
+</html>
