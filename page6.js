@@ -17,6 +17,10 @@ function closePopup() {
   window.location.href = 'quiz2.html';
 }
 
+function tryAgain() {
+  window.location.href = 'page6.html';
+}
+
 function showHint() {
   const hintBox = document.getElementById("hintBox");
   hintBox.style.display = "block";
