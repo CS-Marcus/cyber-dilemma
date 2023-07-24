@@ -34,24 +34,24 @@
       </ol>
     </div>
   </main>
-  
+
   <div class="container">
     <h1>Instantgramms</h1>
     <label for="username">Username:</label>
     <input type="text" id="username" placeholder="Its.Quinn">
     <label for="password">Password:</label>
-    <input type="password" id="password" placeholder="Enter your password">
+    <input type="text" id="password" placeholder="Enter your password" readonly>
     <br>
-    <button class="button" onclick="showPopup('popup1')">M@apleL3afs</button>
-    <button class="button" onclick="showPopup('popup2')">w^4Y&S836uVLL</button>
-    <button class="button" onclick="showPopup('popup3')">toronto12345</button>
+    <button class="button" onclick="showPassword('M@apleL3afs')">M@apleL3afs</button>
+    <button class="button" onclick="showPassword('w^4Y&S836uVLL')">w^4Y&S836uVLL</button>
+    <button class="button" onclick="showPassword('toronto12345')">toronto12345</button>
   </div>
 
   <div class="popup" id="popup1">
     <div class="popup-content">
       <h2>Strong Password!</h2>
       <p>Password: M@apleL3afs</p>
-      <p>Good choice! This password is both strong and easy to remember as it has multiple symbols, capital letters, and lowercase letters.</p>
+      <p>Good choice! This password is both strong and easy to remember as it has multiple symbols, captial letters, lowercase letters.</p>
       <button class="close-button" onclick="closePopup()">Next</button>
     </div>
   </div>
@@ -60,7 +60,7 @@
     <div class="popup-content">
       <h2>Not Bad!</h2>
       <p>Password: w^4Y&S836uVLL</p>
-      <p>Close! This password does have symbols, and upper and lowercase alphabets, however, the password is hard to remember unless you have it written down.</p>
+      <p>Close! This password does have symbols, upper and lowercase alphabets, however, the password is hard to remember unless you have it written down.</p>
       <button class="close-button" onclick="closePopup()">Next</button>
     </div>
   </div>
@@ -69,35 +69,30 @@
     <div class="popup-content">
       <h2>Weak Password</h2>
       <p>Password: toronto12345</p>
-      <p>This password is easy to recognize. It has a location. If someone knows where you live or that you like Toronto they may try to use this word when attempting to login to your account. Additionally, it has a number sequence that is commonly used. When creating your passwords, try to use something others cannot guess and that is unique.</p>
+      <p>This password is easy to recognize. It has a location. If someone knows where you live or that you like Toronto they may try to use this word when attempting to login to your account. Additionally, it has a number sequence the is commonly used. When creating your passwords try to use something others will not be able to guess and unique.</p>
       <button class="close-button" onclick="closePopup()">Next</button>
     </div>
   </div>
 
-  <!--
-  <div id="popup1">
-    <p>Popup 1</p>
-    <h2>Popup Title</h2>
-    <p>Popup content goes here.</p>
-    <button onclick="closePopup()">Next</button>
-  </div>
-
-  <div id="popup2">
-    <p>Popup 2</p>
-    <h2>Popup Title</h2>
-    <p>Popup content goes here.</p>
-    <button onclick="closePopup()">Next</button>
-  </div>
-
-  <div id="popup3">
-    <p>Popup 3</p>
-    <h2>Popup Title</h2>
-    <p>Popup content goes here.</p>
-    <button onclick="closePopup()">Next</button>
-  </div>
- -->
-
   <script>
+     function showPassword(password) {
+      document.getElementById("password").value = password;
+      //wait for a second, then open appropriate popup
+      setTimeout(() => {
+        openPopup(password);
+      }, 1000);
+    }
+
+    function openPopup(password) {
+      if (password === "M@apleL3afs") {
+        showPopup("popup1");
+      } else if (password === "w^4Y&S836uVLL") {
+        showPopup("popup2");
+      } else if (password === "toronto12345") {
+        showPopup("popup3");
+      }
+    }
+
     function showPopup(popupId) {
       var popup = document.getElementById(popupId);
       popup.style.display = "block";
@@ -106,16 +101,6 @@
     function closePopup(popupId) {
       window.location.href = 'page4.html';
     }
-
-    /* Code to show password option in password box **Still working on this
-    const options = document.querySelectorAll("li");
-
-    options.forEach(option => {
-      option.addEventListener("click", () => {
-        const selectedOption = option.textContent;
-        document.getElementById("selected-option").textContent = selectedOption;
-      });
-    });*/
   </script>
 </body>
 
