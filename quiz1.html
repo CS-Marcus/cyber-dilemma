@@ -15,7 +15,7 @@
     <!-- <label><input type="radio" name="q1" value="c">c) 5</label>
     <label><input type="radio" name="q1" value="d">d) 6</label> -->
 
-    <p>Question 2: What is steganography?</p>
+    <p>Question 2: What is Steganography?</p>
     <label><input type="radio" name="q2" value="a">a) A way of scrambling data with keys to conceal it </label>
     <label><input type="radio" name="q2" value="b">b) A system that protects your data from cyber attacks </label>
     <label><input type="radio" name="q2" value="c">c) A form of hiding sensitive information in plain sight</label> <br>
@@ -55,47 +55,88 @@
 
   <script>
     function calculateScore() {
-      const form = document.getElementById("quizForm");
-      let score = 0;
-
-      // Get the user's answers and calculate the score
-      const q1Answer = form.elements["q1"].value;
-      if (q1Answer === "b") {
-        score++;
+      
+      if(notFinished()) {
+        alert('Please answer all the questions');
       }
+      else {
+          const form = document.getElementById("quizForm");
+        let score = 0;
 
-      const q2Answer = form.elements["q2"].value;
-      if (q2Answer === "c") {
-        score++;
+        // Get the user's answers and calculate the score
+        const q1Answer = form.elements["q1"].value;
+        if (q1Answer === "b") {
+          score++;
+        }
+
+        const q2Answer = form.elements["q2"].value;
+        if (q2Answer === "c") {
+          score++;
+        }
+
+        const q3Answer = form.elements["q3"].value;
+        if (q3Answer === "b") {
+          score++;
+        }
+
+        const q4Answer = form.elements["q4"].value;
+        if (q4Answer === "b") {
+          score++;
+        }
+
+        const q5Answer = form.elements["q5"].value;
+        if (q5Answer === "a") {
+          score++;
+        }
+
+        // Store the score in local storage
+        localStorage.setItem("quiz1Score", score);
+
+        // alert("Thanks for submitting! Continue on to the game now");
+        const popup = document.getElementById('popup');
+        popup.style.display = 'block';
       }
-
-      const q3Answer = form.elements["q3"].value;
-      if (q3Answer === "b") {
-        score++;
-      }
-
-      const q4Answer = form.elements["q4"].value;
-      if (q4Answer === "b") {
-        score++;
-      }
-
-      const q5Answer = form.elements["q5"].value;
-      if (q5Answer === "a") {
-        score++;
-      }
-
-      // Store the score in local storage
-      localStorage.setItem("quiz1Score", score);
-
-      // alert("Thanks for submitting! Continue on to the game now");
-      const popup = document.getElementById('popup');
-      popup.style.display = 'block';
     }
+
+    // function gameFinished() {
+
+    // }
 
     function moveOn() {
         // Redirect to the next page
         window.location.href = "page2.html";
     }
+    // function validateForm() {
+    //   const form = document.getElementById("quizForm");
+
+    //   // Check if all questions have been answered
+    //   const q1Answer = form.elements["q1"].value;
+    //   const q2Answer = form.elements["q2"].value;
+    //   const q3Answer = form.elements["q3"].value;
+    //   const q4Answer = form.elements["q4"].value;
+    //   const q5Answer = form.elements["q5"].value;
+
+    //   if (!q1Answer || !q2Answer || !q3Answer || !q4Answer || !q5Answer) {
+    //     alert("Please answer all questions before submitting the quiz.");
+    //     return false;
+    //   }
+
+    //   return true; // Proceed with form submission
+    // }
+    function notFinished() {
+      var q1 = document.querySelector('input[name="q1"]:checked');
+      var q2 = document.querySelector('input[name="q2"]:checked');
+      var q3 = document.querySelector('input[name="q3"]:checked');
+      var q4 = document.querySelector('input[name="q4"]:checked');
+      var q5 = document.querySelector('input[name="q5"]:checked');
+
+      if (!q1 || !q2 || !q3 || !q4 || !q5) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
   </script>
 
 </body>

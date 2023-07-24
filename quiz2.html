@@ -58,55 +58,73 @@
 
   <script>
     function calculateScore() {
-      const form = document.getElementById("quizForm");
-      let score = 0;
-
-      // Get the user's answers and calculate the score
-      const q1Answer = form.elements["q1"].value;
-      if (q1Answer === "d") {
-        score++;
+      if(notFinished()) {
+        alert('Please answer all the questions');
       }
+      else {
+        const form = document.getElementById("quizForm");
+        let score = 0;
 
-      const q2Answer = form.elements["q2"].value;
-      if (q2Answer === "c") {
-        score++;
+        // Get the user's answers and calculate the score
+        const q1Answer = form.elements["q1"].value;
+        if (q1Answer === "d") {
+          score++;
+        }
+
+        const q2Answer = form.elements["q2"].value;
+        if (q2Answer === "c") {
+          score++;
+        }
+
+        const q3Answer = form.elements["q3"].value;
+        if (q3Answer === "c") {
+          score++;
+        }
+
+        const q4Answer = form.elements["q4"].value;
+        if (q4Answer === "b") {
+          score++;
+        }
+
+        const q5Answer = form.elements["q5"].value;
+        if (q5Answer === "a") {
+          score++;
+        }
+
+        // Retrieve the score from the first quiz
+        const quiz1Score = parseInt(localStorage.getItem("quiz1Score"));
+
+        const popup = document.getElementById('popup');
+        popup.style.display = 'block';
+
+        document.getElementById("fs1").innerHTML = "Pre-Quiz Score: " + quiz1Score;
+        document.getElementById("fs2").innerHTML = "Post-Quiz Score: " + score;
+        document.getElementById("fs3").innerHTML = "You improved your Cyber Security knowledge by: " + ((score-quiz1Score) * 20)  + "%";
+      
       }
-
-      const q3Answer = form.elements["q3"].value;
-      if (q3Answer === "c") {
-        score++;
-      }
-
-      const q4Answer = form.elements["q4"].value;
-      if (q4Answer === "b") {
-        score++;
-      }
-
-      const q5Answer = form.elements["q5"].value;
-      if (q5Answer === "a") {
-        score++;
-      }
-
-      // Add other questions' score calculations here
-
-      // Retrieve the score from the first quiz
-      const quiz1Score = parseInt(localStorage.getItem("quiz1Score"));
-
-      const popup = document.getElementById('popup');
-      popup.style.display = 'block';
-
-      document.getElementById("fs1").innerHTML = "Pre-Game Quiz Score: " + quiz1Score;
-      document.getElementById("fs2").innerHTML = "Post-Game Quiz Score: " + score;
-      document.getElementById("fs3").innerHTML = "You improved your Cyber Security knowledge by: " + ((score-quiz1Score) * 20)  + "%";
     }
 
-  function closePopup() {
-    // const popup = document.getElementById('popup');
-    // popup.style.display = 'none';
+    function notFinished() {
+      var q1 = document.querySelector('input[name="q1"]:checked');
+      var q2 = document.querySelector('input[name="q2"]:checked');
+      var q3 = document.querySelector('input[name="q3"]:checked');
+      var q4 = document.querySelector('input[name="q4"]:checked');
+      var q5 = document.querySelector('input[name="q5"]:checked');
 
-    var url = "https://docs.google.com/forms/d/e/1FAIpQLScJLa6FQbNpu_68K1i2ImP4Y3izDPHOTbOS6NCv-ptsiIW-_Q/viewform?usp=sharing";  //link to data collecton sheet
-    window.open(url); 
-  } 
+      if (!q1 || !q2 || !q3 || !q4 || !q5) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    function closePopup() {
+      // const popup = document.getElementById('popup');
+      // popup.style.display = 'none';
+
+      var url = "https://docs.google.com/forms/d/e/1FAIpQLScJLa6FQbNpu_68K1i2ImP4Y3izDPHOTbOS6NCv-ptsiIW-_Q/viewform?usp=sharing";  //link to data collecton sheet
+      window.open(url); 
+    } 
   </script>
 </body>
 </html>
