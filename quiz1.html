@@ -45,8 +45,8 @@
     <div class="popup" id="popup">
       <div class="popup-content">
         <h2> Thanks for submitting! </h2>
-        <p>Your score will be shown at the end of the game</p>
-        <p>But for now, move on to the Game</p>
+        <p id="1">Your pre-game quiz score is </p>
+        <p>Move on to the Game</p>
         <button class= "close-button"type="button" onclick="moveOn()"> PLAY THE GAME! </button>
       </div>
     </div>
@@ -91,6 +91,7 @@
 
         // Store the score in local storage
         localStorage.setItem("quiz1Score", score);
+        document.getElementById("1").innerHTML += score + " / 5";
 
         // alert("Thanks for submitting! Continue on to the game now");
         const popup = document.getElementById('popup');
@@ -103,26 +104,9 @@
     // }
 
     function moveOn() {
-        // Redirect to the next page
         window.location.href = "page2.html";
     }
-    // function validateForm() {
-    //   const form = document.getElementById("quizForm");
-
-    //   // Check if all questions have been answered
-    //   const q1Answer = form.elements["q1"].value;
-    //   const q2Answer = form.elements["q2"].value;
-    //   const q3Answer = form.elements["q3"].value;
-    //   const q4Answer = form.elements["q4"].value;
-    //   const q5Answer = form.elements["q5"].value;
-
-    //   if (!q1Answer || !q2Answer || !q3Answer || !q4Answer || !q5Answer) {
-    //     alert("Please answer all questions before submitting the quiz.");
-    //     return false;
-    //   }
-
-    //   return true; // Proceed with form submission
-    // }
+   
     function notFinished() {
       var q1 = document.querySelector('input[name="q1"]:checked');
       var q2 = document.querySelector('input[name="q2"]:checked');
