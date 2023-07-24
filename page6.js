@@ -1,24 +1,42 @@
-function openPopup() {
-  const userAnswer = document.getElementById("answer").value.trim().toLowerCase();
-  const correctAnswer = "what are you doing in my swamp";
-  const correctAnswer2 = "What are you doing in my swamp";
-  const resultElement = document.getElementById("result");
+let attempts = 0;
 
-  if (userAnswer === correctAnswer || userAnswer === correctAnswer2) {
-    const popup = document.getElementById('popup1');
-    popup.style.display = 'block';
-  } else {
-    const popup = document.getElementById('popup2');
-    popup.style.display = 'block';
+  function openPopup() {
+    const userAnswer = document.getElementById("answer").value;
+    const correctAnswer = "what are you doing in my swamp"; // The correct answer
+
+    if (userAnswer.toLowerCase() === correctAnswer) {
+      document.getElementById("popup1").style.display = "block";
+    } else {
+      attempts++;
+      if (attempts === 1) {
+        document.getElementById("popup2").style.display = "block";
+      } 
+      else if(attempts === 2) {
+        document.getElementById("popup3").style.display = "block";
+        document.getElementById("popup3").querySelector("button").innerText = "Try One More Time";
+      }
+      else if(attempts === 3) {
+        // If the user has attempted 3 times, allow them to move on
+        document.getElementById("popup4").style.display = "block";
+        document.getElementById("popup4").querySelector("button").innerText = "Move On";
+        document.getElementById("popup4").querySelector("button").setAttribute("onclick", "moveOn()");
+      }
+    }
   }
-}
+
+
+
+  function moveOn() {
+    window.location.href = "quiz2.html";
+  }
 
 function closePopup() {
   window.location.href = 'quiz2.html';
 }
 
 function tryAgain() {
-  window.location.href = 'page6.html';
+  document.getElementById("popup2").style.display = "none";
+  document.getElementById("popup3").style.display = "none";
 }
 
 function showHint() {
@@ -30,16 +48,3 @@ function showHint() {
     hintBox.style.display = "none";
   }, 6000);
 }
-
-/*
-function checkAnswer() {
-  const userAnswer = document.getElementById("answer").value.trim().toLowerCase();
-  const correctAnswer = "lol";
-  const resultElement = document.getElementById("result");
-
-  if (userAnswer === correctAnswer) {
-    resultElement.textContent = "You are right!";
-  } else {
-    resultElement.textContent = "You are wrong!";
-  }
-}*/
