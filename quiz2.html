@@ -45,7 +45,7 @@
 
     <div class="popup" id="popup">
       <div class="popup-content">
-        <h2> Thanks for submitting! </h2>
+        <h2> Thanks for submitting and playing! </h2>
         <p id="fs1"></p>
         <p id="fs2"></p>
         <p id="fs3"></p>
@@ -99,7 +99,7 @@
 
         document.getElementById("fs1").innerHTML = "Pre-Quiz Score: " + quiz1Score;
         document.getElementById("fs2").innerHTML = "Post-Quiz Score: " + score;
-        document.getElementById("fs3").innerHTML = "You improved your Cyber Security knowledge by: " + ((score-quiz1Score) * 20)  + "%";
+        document.getElementById("fs3").innerHTML = "Mean improvement percent: " + ((score-quiz1Score) * 20)  + "%";
       
       }
     }
