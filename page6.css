@@ -4,7 +4,7 @@ body {
     font-family: Arial, sans-serif;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 100%;
+    background-size: 120%;
     background-image: url(summer-sand-beach-with-coconut-palm-leaves-foreground_252965-1106.avif);
     
   }
@@ -64,9 +64,11 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: larger;
   }
   
-  .submit-button:hover {
+  .submit-button:hover,
+  .hint-button:hover {
     background-color: #45a049;
 
   }
@@ -74,10 +76,11 @@ body {
   {
     background-color: white;
     width: 300px;
-    height: 100px;
+    height: 120px;
     border: 1px solid blue;
     padding: 2%;
     margin: 3%;
+    text-align: center;
   }
 
 
@@ -119,6 +122,10 @@ body {
     border: none;
     cursor: pointer;
     border-radius: 4px;
+  }
+
+  .close-button:hover {
+    background-color: #1866a3;
   }
 
   #hintBox {
