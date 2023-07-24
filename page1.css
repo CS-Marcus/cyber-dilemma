@@ -2,6 +2,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  background-image: url(shutterstock_1459075250-1000x667-1-780x470.jpg);
 }
 
 .container {
@@ -15,6 +19,7 @@ body {
 h1 {
   font-size: 6rem;
   margin-bottom: 40px;
+  color: white;
 }
 
 button {
