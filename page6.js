@@ -3,8 +3,9 @@ let attempts = 0;
   function openPopup() {
     const userAnswer = document.getElementById("answer").value;
     const correctAnswer = "what are you doing in my swamp"; // The correct answer
+    const correctAnswer2 = "what are you doing in my swamp "; // The correct answer
 
-    if (userAnswer.toLowerCase() === correctAnswer) {
+    if (userAnswer.toLowerCase() === correctAnswer|| userAnswer.toLowerCase() === correctAnswer2) {
       document.getElementById("popup1").style.display = "block";
     } else {
       attempts++;
