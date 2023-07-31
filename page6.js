@@ -28,11 +28,15 @@ let attempts = 0;
 
 
   function moveOn() {
-    window.location.href = "quiz2.html";
+    // window.location.href = "quiz2.html";
+    var url = "https://docs.google.com/forms/d/e/1FAIpQLScJLa6FQbNpu_68K1i2ImP4Y3izDPHOTbOS6NCv-ptsiIW-_Q/viewform?usp=sharing";  //link to data collecton sheet
+    window.open(url);
   }
 
 function closePopup() {
-  window.location.href = 'quiz2.html';
+  // window.location.href = 'quiz2.html';
+  var url = "https://docs.google.com/forms/d/e/1FAIpQLScJLa6FQbNpu_68K1i2ImP4Y3izDPHOTbOS6NCv-ptsiIW-_Q/viewform?usp=sharing";  //link to data collecton sheet
+  window.open(url);
 }
 
 function tryAgain() {
