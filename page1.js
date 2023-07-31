@@ -1,5 +1,6 @@
 function goToGamePage() {
-  window.location.href = 'quiz1.html';
+  // window.location.href = 'quiz1.html';
+  window.location.href = 'page2.html';
 }
 
 function openPopup() {
