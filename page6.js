@@ -20,7 +20,7 @@ let attempts = 0;
         // If the user has attempted 3 times, allow them to move on
         document.getElementById("popup4").style.display = "block";
         // document.getElementById("popup4").querySelector("button").innerText = "Move On";
-        document.getElementById("popup4").querySelector("button").setAttribute("onclick", "moveOn()");
+        // document.getElementById("popup4").querySelector("button").setAttribute("onclick", "moveOn()");
       }
     }
   }
