@@ -56,10 +56,10 @@
   <script>
     function calculateScore() {
       
-      // if(notFinished()) {
-      //   alert('Please answer all the questions');
-      // }
-      // else {
+      if(notFinished()) {
+        alert('Please answer all the questions');
+      }
+      else {
           const form = document.getElementById("quizForm");
         let score = 0;
 
@@ -87,7 +87,7 @@
         const q5Answer = form.elements["q5"].value;
         if (q5Answer === "a") {
           score++;
-        //}
+        }
 
         // Store the score in local storage
         localStorage.setItem("quiz1Score", score);
